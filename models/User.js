@@ -22,6 +22,7 @@ const UserModel = sequelize.define(
     //id, firstName, lastName, createdAt, updatedAt
     firstName: {
       type: DataTypes.STRING,
+      // buradaki DataTypes : Sequelize kütüphanesinden çekiliyor. direk string yazılmıyor bu şekilde yazmak lazım. yukarda desc. şeklinde import ettik.
       allowNull: false,
     },
     lastName: {
