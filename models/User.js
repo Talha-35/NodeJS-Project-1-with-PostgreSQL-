@@ -16,13 +16,15 @@ sequelize
 
 // modelname, attribute, options
 const UserModel = sequelize.define(
+  // define DB deki verileri çekmek için kullanılan özellik
   "recruiters",
+  // tablo ismi (recruiters) default olarak çoğul olma zorunda
   {
     //attributes
     //id, firstName, lastName, createdAt, updatedAt
     firstName: {
       type: DataTypes.STRING,
-      // buradaki DataTypes : Sequelize kütüphanesinden çekiliyor. direk string yazılmıyor bu şekilde yazmak lazım. yukarda desc. şeklinde import ettik.
+      // buradaki DataTypes : Sequelize kütüphanesinden çekiliyor. direk string yazılmıyor bu şekilde yazmak lazım. yukarda desc. şeklinde sequelize'dan import ettik.
       allowNull: false,
     },
     lastName: {
@@ -33,6 +35,7 @@ const UserModel = sequelize.define(
   {
     //options
     freezeTableName: true,
+    // bu özellik eklenir ise recuiters yazan yani tablonun isimleri tekil olabilir.
   }
 );
 

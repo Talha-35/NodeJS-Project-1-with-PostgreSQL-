@@ -6,7 +6,7 @@ exports.get_users = async (req, res, next) => {
     const userList = await UserModel.findAll({});
     res.render("users", { userList });
   } catch (error) {
-    res.send("An error occured");
+    res.send("An error Occured");
   }
 };
 
