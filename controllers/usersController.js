@@ -24,7 +24,9 @@ exports.add_user = async (req, res) => {
       lastName: req.body.lastName,
     });
     res.redirect("/users");
+    // redirect kısmı post edildikten yani ekleme yapıldıktan sonra ana sayfaya gitmemiz sağlıyor
   } catch (error) {
+    // console.log('error', error)
     res.send("An error occured.");
   }
 };

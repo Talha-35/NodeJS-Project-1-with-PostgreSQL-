@@ -26,6 +26,7 @@ const UserModel = sequelize.define(
       type: DataTypes.STRING,
       // buradaki DataTypes : Sequelize kütüphanesinden çekiliyor. direk string yazılmıyor bu şekilde yazmak lazım. yukarda desc. şeklinde sequelize'dan import ettik.
       allowNull: false,
+      // burdaki olay form/input a boş veri girilmesi değil. çünü o zaman null olmuyor. boş string oluyor ve boş kaydediyor. null demek mesela => usercontrollers içindeki   firstName: req.body.firstName, şu kısmın silin veya yoruma alın o zaman hata verir
     },
     lastName: {
       type: DataTypes.STRING,
